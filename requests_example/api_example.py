@@ -17,6 +17,6 @@ def get_users(number_users):
         for user in users:
             name = user["name"]
             print(f'{name["title"]} {name["first"]} {name["last"]}') 
-    
+
 if __name__ == '__main__':
     get_users(10)
