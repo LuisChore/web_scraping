@@ -76,8 +76,15 @@ def put_example():
     if response.status_code == 200:
         print(response.text)
     
-def delete_example():
-    pass
-    
+def cookies_example():
+    URL = "https://httpbin.org/cookies"
+    cookies = {
+        'user': 'luis',
+        'session': '123'
+    }
+    response = requests.get(URL,cookies = cookies)
+    if response.status_code == 200:
+        print(response.json())
+        
 if __name__ == '__main__':
-    put_example()
+    cookies_example()
