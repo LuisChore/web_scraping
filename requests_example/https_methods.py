@@ -60,6 +60,24 @@ def headers_example():
     if response.status_code == 200:
         payload = response.json()
         print(payload['headers']['Course'])
+
+def put_example():
+    URL = "https://httpbin.org/put"
+    params = {
+        'name': 'Javs',
+    }
+    headers = {
+        'version': '2.0'
+    }
+    data = {
+        'id': 1
+    }
+    response = requests.put(URL,params = params,headers = headers,data = data)
+    if response.status_code == 200:
+        print(response.text)
+    
+def delete_example():
+    pass
     
 if __name__ == '__main__':
-    headers_example()
+    put_example()
